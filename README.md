@@ -26,6 +26,9 @@ The following resources concerning the raw data are provided through the the New
 *   [New York State Gaming Commission Equine Death and Breakdown Overview](https://data.ny.gov/api/assets/EF9B4960-2FB7-4E36-90DB-8418719BDDE0?download=true)
 *   [New York State Gaming Commission Equine Death and Breakdown Data Dictionary]( https://data.ny.gov/api/assets/4155080B-AE09-4D1A-931C-BC6BE3249BCF?download=true)
 
+### Project Architecture ###
+This project utilised the `ProjectTemplate` package in `R`. This project uses a modified version of the `ProjectTemplate` [architecture](http://projecttemplate.net/architecture.html).
+
 ### Required Packages & Versions ###
 The following version of `R` was used along with the following packages. These are required to complete the analysis. The version information for these packages is included as of the time of final review.
 *   [R version 3.2.0 (2015-04-16) "Full of Ingredients"](http://www.r-project.org/)
