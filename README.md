@@ -33,7 +33,7 @@ The following version of `R` was used along with the following packages. These a
 *   [reshape2: Flexibly Reshape Data: A Reboot of the Reshape Package, Version 1.4.1](http://cran.r-project.org/web/packages/reshape2/index.html)
 
 ### Coding Standards ##
-The [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) provides the foundation for the coding standards utilised in the `R` source files.
+The [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) provides the foundation for the coding standards utilised in the `R` source files.
 
 ## License
 ![alt text](http://www.gnu.org/graphics/gplv3-88x31.png "GPLv3")
