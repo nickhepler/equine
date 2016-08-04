@@ -1,5 +1,5 @@
 # Equine Death and Breakdown in New York State #
-__Reproducible Research Project Using R & LaTeX__
+__Reproducible Research Project Using R & R Markdown__
 
 _Nick Hepler, [University at Albany](http://www.albany.edu), [College of Engineering and Applied Sciences](http://www.albany.edu/ceas/)_
 
