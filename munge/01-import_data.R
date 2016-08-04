@@ -1,6 +1,6 @@
 #  01-import_data.R
 #
-#  Version 0.0.1
+#  Version 0.1.0
 #
 #  Copyright 2016 Nick Hepler <nick@nickhepler.com>
 #
@@ -19,11 +19,6 @@
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
 #
-
-#  Check for raw data. If present, skip to next file.
-if (!file.exists("./data/equine_death_breakdown_raw.csv")) {
-  source("./munge/02-tidy_data.R")
-}
 
 #  Check for data folder. If missing, create it.
 if (!file.exists("data")) {

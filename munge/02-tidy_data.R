@@ -20,11 +20,6 @@
 #  MA 02110-1301, USA.
 #
 
-#  Check for raw data. If present, skip to next file.
-#  if (!file.exists("./data/equine_death_breakdown_raw.csv")) {
-#    source("./munge/02-tidy_data.R")
-#  }
-
 # Load dplyr: A Grammar of Data Manipulation package
 require("dplyr")
 
@@ -37,7 +32,7 @@ if (!file.exists("./data/equine_death_breakdown_raw.csv")) {
 
 # Load file as data frame.
 raw <- read.csv("./data/equine_death_breakdown_raw.csv",
-  stringsAsFactors=FALSE)
+                stringsAsFactors=FALSE)
 
 # Modify variable names to lower case.
 names(raw) <- tolower(names(raw))
