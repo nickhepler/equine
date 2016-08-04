@@ -6,6 +6,8 @@ _Nick Hepler, [University at Albany](http://www.albany.edu), [College of Enginee
 ## Objectives ##
 This project examines summary statistics concerning *Equine Death and Breakdown* data obtained from the New York State Gaming Commission. The data contains information on every horse that has broken down, died, sustained a serious injury, or been involved in an incident at a track in New York State since 2009.
 
+The objective of the author was to utilize the `R` language and environment for statistical computing and graphics to create a reproducible research project. The project employed the `ggplot2` package to create data visualizations along with [R Markdown]( http://rmarkdown.rstudio.com/) to generate the final report.
+
 ## Results Reproduction ##
 The results in this report can be reproduced using the following procedure:
 
