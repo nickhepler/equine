@@ -4,7 +4,7 @@ __Reproducible Research Project Using R & LaTeX__
 _Nick Hepler, [University at Albany](http://www.albany.edu), [College of Engineering and Applied Sciences](http://www.albany.edu/ceas/)_
 
 ## Objectives ##
-The main objective of this project was to utilise the `R` language and environment for statistical computing and graphics to obtain a raw data set, prepare the raw data for analysis, and run an analysis of the data, provide a visualisation of the data, and to create a report document with `LaTeX` documentation format.
+This project examines summary statistics concerning *Equine Death and Breakdown* data obtained from the New York State Gaming Commission. The data contains information on every horse that has broken down, died, sustained a serious injury, or been involved in an incident at a track in New York State since 2009.
 
 ## Results Reproduction ##
 The results in this report can be reproduced using the following procedure:
