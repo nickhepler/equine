@@ -41,7 +41,7 @@ The following version of `R` was used along with the following packages. These a
 The [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) provides the foundation for the coding standards utilised in the `R` source files.
 
 ## License
-![alt text](http://www.gnu.org/graphics/gplv3-88x31.png "GPLv3")
+![alt text](http://www.gnu.org/graphics/gplv3-88x31.png "GNU General Public License")
 
 This program is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](http://www.gnu.org/licenses/gpl.txt) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
