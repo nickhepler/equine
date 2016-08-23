@@ -1,23 +1,18 @@
-#  02-tidy_data.R
-#
-#  Version 0.0.1
-#
-#  Copyright 2016 Nick Hepler <nick@nickhepler.com>
-#
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this program; if not, write to the Free Software
-#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-#  MA 02110-1301, USA.
+# 02-tidy_data.R
+# Copyright (C) 2016  Nick Hepler
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
 # Load dplyr: A Grammar of Data Manipulation package
@@ -32,10 +27,21 @@ if (!file.exists("./data/equine_death_breakdown_raw.csv")) {
 
 # Load file as data frame.
 raw <- read.csv("./data/equine_death_breakdown_raw.csv",
-                stringsAsFactors=FALSE)
+  stringsAsFactors=FALSE, na.strings = NA)
 
 # Modify variable names to lower case.
 names(raw) <- tolower(names(raw))
+
+# Check for explicate null values.
+print(sum(is.na(raw$year)))
+print(sum(is.na(raw$incident.date)))
+print(sum(is.na(raw$incident.type)))
+print(sum(is.na(raw$track)))
+print(sum(is.na(raw$inv.location)))
+print(sum(is.na(raw$racing.type.description)))
+
+
+
 
 # Modify variables to data objects.
 raw$incident.date <- as.Date(strptime(raw$incident.date, "%m/%d/%Y"))
@@ -45,8 +51,8 @@ raw$division <- factor(raw$division)
 
 #  Load data frame to dplyr.
 raw <- tbl_df(raw)
-raw <- select(raw, -(inv.location:racing.type.description))
-raw <- select(raw, -(weather.conditions:death.or.injury))
+# raw <- select(raw, -(inv.location:racing.type.description))
+# raw <- select(raw, -(weather.conditions:death.or.injury))
 
 # Review factor variables for possible issues.
 print(table(raw$incident.type,useNA="ifany"))
@@ -60,7 +66,7 @@ raw$track <- gsub("Saratoga Racecourse (NYRA)","Saratoga Gaming & Raceway",
 
 # Filter data to include only equine deaths and exclude 2015. 
 raw <- arrange(raw, incident.date)
-# raw <- filter(raw, incident.type=="EQUINE DEATH")
+raw <- filter(raw, incident.type=="EQUINE DEATH")
 # raw <- filter(raw, year != "2015")
 
 # Add count to cast into new data frames.
