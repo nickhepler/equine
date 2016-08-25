@@ -1,12 +1,12 @@
 # Equine Death and Breakdown in New York State #
 __Reproducible Research Project Using R & R Markdown__
 
-_Nick Hepler, [University at Albany](http://www.albany.edu), [College of Engineering and Applied Sciences](http://www.albany.edu/ceas/)_
+_[Nick Hepler](www.albany.edu/~nh998156/), [University at Albany](http://www.albany.edu), [College of Engineering and Applied Sciences](http://www.albany.edu/ceas/)_
 
 ## Objectives ##
-This project examines summary statistics concerning *Equine Death and Breakdown* data obtained from the New York State Gaming Commission. The data contains information on every horse that has broken down, died, sustained a serious injury, or been involved in an incident at a track in New York State since 2009.
+This project examines summary statistics concerning *Equine Death and Breakdown* data obtained from the [New York State Gaming Commission](https://www.gaming.ny.gov/). The data contains information on every horse that has broken down, died, sustained a serious injury, or been involved in an incident at a track in New York State since 2009.
 
-The objective of the author was to utilize the `R` language and environment for statistical computing and graphics to create a reproducible research project. The project employed the `ggplot2` package to create data visualizations along with [R Markdown]( http://rmarkdown.rstudio.com/) to generate the final report.
+The objective of the author was to utilize the `R` language and environment for statistical computing and graphics to create a reproducible research project. The project employed the various `R` packages of [Hadley Wickham](http://hadley.nz/)'s *tidyverse* to import, tidy, and transform the data. Additionally, the final report was  written using [R Markdown]( http://rmarkdown.rstudio.com/) from [RStudio](http://rstudio.com/).
 
 ## Results Reproduction ##
 The results in this report can be reproduced using the following procedure:
@@ -29,7 +29,7 @@ The following resources concerning the raw data are provided through the the New
 *   [New York State Gaming Commission Equine Death and Breakdown Data Dictionary]( https://data.ny.gov/api/assets/4155080B-AE09-4D1A-931C-BC6BE3249BCF?download=true)
 
 ### Project Architecture ###
-This project utilised a modified version of the [`ProjectTemplate`](http://projecttemplate.net/) [architecture](http://projecttemplate.net/architecture.html) package available in `R`. 
+This project utilised a modified version of the [`ProjectTemplate`](http://projecttemplate.net/) [architecture](http://projecttemplate.net/architecture.html) package available in `R`.
 
 ### Required Packages & Versions ###
 The following version of `R` was used along with the following packages. These are required to complete the analysis. The version information for these packages is included as of the time of final review.
