@@ -1,21 +1,15 @@
 # Equine Death and Breakdown in New York State #
 __Reproducible Research Project Using R & R Markdown__
 
-_Nick Hepler, [University at Albany](http://www.albany.edu), [College of Engineering and Applied Sciences](http://www.albany.edu/ceas/)_
+_[Nick Hepler](http://www.albany.edu/~nh998156/), [University at Albany](http://www.albany.edu), [College of Engineering and Applied Sciences](http://www.albany.edu/ceas/)_
 
 ## Objectives ##
-This project examines summary statistics concerning *Equine Death and Breakdown* data obtained from the New York State Gaming Commission. The data contains information on every horse that has broken down, died, sustained a serious injury, or been involved in an incident at a track in New York State since 2009.
+This project examines summary statistics concerning *Equine Death and Breakdown* data obtained from the [New York State Gaming Commission](https://www.gaming.ny.gov/). The data contains information on every horse that has broken down, died, sustained a serious injury, or been involved in an incident at a track in New York State since 2009.
 
-The objective of the author was to utilize the `R` language and environment for statistical computing and graphics to create a reproducible research project. The project employed the `ggplot2` package to create data visualizations along with [R Markdown]( http://rmarkdown.rstudio.com/) to generate the final report.
+The objective of the author was to utilize the `R` language and environment for statistical computing and graphics to create a reproducible research project. The project employed the various `R` packages of [Hadley Wickham](http://hadley.nz/)'s *tidyverse* to import, tidy, and transform the data. The final report was  written using [R Markdown]( http://rmarkdown.rstudio.com/) from [RStudio](http://rstudio.com/).
 
 ## Results Reproduction ##
-The results in this report can be reproduced using the following procedure:
-
-Download the following files to your `R` working directory:
-
-*   [download_data.R](https://raw.githubusercontent.com/nickhepler/equine/master/download_data.R)
-*   [data_preparation.R](https://raw.githubusercontent.com/nickhepler/equine/master/data_preparation.R)
-*   [run_analysis.R](https://raw.githubusercontent.com/nickhepler/equine/master/run_analysis.R)
+The results in this report are intended to be reproducible and
 
 Source the _download_data.R_ file in one of the following manners:
 
@@ -24,12 +18,12 @@ Source the _download_data.R_ file in one of the following manners:
 
 ## Technical Specifications ##
 ### Raw Data ###
-The following resources concerning the raw data are provided through the the New York State Open Data website:
+The following resources concerning the raw data are provided through the New York State Open Data website:
 *   [New York State Gaming Commission Equine Death and Breakdown Overview](https://data.ny.gov/api/assets/EF9B4960-2FB7-4E36-90DB-8418719BDDE0?download=true)
 *   [New York State Gaming Commission Equine Death and Breakdown Data Dictionary]( https://data.ny.gov/api/assets/4155080B-AE09-4D1A-931C-BC6BE3249BCF?download=true)
 
 ### Project Architecture ###
-This project utilised a modified version of the [`ProjectTemplate`](http://projecttemplate.net/) [architecture](http://projecttemplate.net/architecture.html) package available in `R`. 
+This project utilized a modified version of the [`ProjectTemplate`](http://projecttemplate.net/) package [architecture](http://projecttemplate.net/architecture.html)  available in `R`.
 
 ### Required Packages & Versions ###
 The following version of `R` was used along with the following packages. These are required to complete the analysis. The version information for these packages is included as of the time of final review.
@@ -38,7 +32,7 @@ The following version of `R` was used along with the following packages. These a
 *   [reshape2: Flexibly Reshape Data: A Reboot of the Reshape Package, Version 1.4.1](http://cran.r-project.org/web/packages/reshape2/index.html)
 
 ### Coding Standards ##
-The [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) provides the foundation for the coding standards utilised in the `R` source files.
+The [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) provides the foundation for the coding standards utilized in the `R` source files.
 
 ## License
 ![alt text](http://www.gnu.org/graphics/gplv3-88x31.png "GNU General Public License")
