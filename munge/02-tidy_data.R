@@ -27,11 +27,7 @@ if (!file.exists("./data/equine_death_breakdown_raw.csv")) {
 
 # Load file as data frame.
 raw <- read.csv("./data/equine_death_breakdown_raw.csv",
-<<<<<<< HEAD
   stringsAsFactors=FALSE, na.strings = NA)
-=======
-  stringsAsFactors=FALSE)
->>>>>>> d9bca7bab0c004ab90f092fb2a5cdb91a67d63e2
 
 # Modify variable names to lower case.
 names(raw) <- tolower(names(raw))
