@@ -1,6 +1,6 @@
-#  01-import_data_readr.R
+#  01-import_data_tidyv.R
 #
-#  Version 0.0.6
+#  Version 0.0.7
 #
 #  Copyright 2016-2017 Nick Hepler <nick@nickhepler.com>
 #
