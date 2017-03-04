@@ -1,8 +1,8 @@
-#  01-import_data.R
+#  01-import_data_readr.R
 #
-#  Version 0.0.5
+#  Version 0.0.6
 #
-#  Copyright 2016 Nick Hepler <nick@nickhepler.com>
+#  Copyright 2016-2017 Nick Hepler <nick@nickhepler.com>
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -31,6 +31,4 @@ dateDownloaded <- date()
 cache('dateDownloaded')
 
 #  Write the data to the Gloab Envrionment.
-write_csv(x, path, na = "NA", append = FALSE, col_names = !append)
-
-# TODO(nickhepler): Detach loaded packages.
+write_csv(raw, "./data/equine_death_breakdown_raw.csv")
