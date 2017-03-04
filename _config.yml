@@ -1,0 +1,8 @@
+title: Equine
+description: This project examines summary statistics concerning Equine Death and Breakdown data obtained from the New York State Gaming Commission
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
