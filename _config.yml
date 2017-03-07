@@ -3,6 +3,7 @@ description: This project examines summary statistics concerning Equine Death an
 google_analytics: 
 show_downloads: false
 theme: jekyll-theme-minimal
-
+site.pages:
+  - report.md
 gems:
   - jekyll-mentions
