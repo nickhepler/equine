@@ -1,6 +1,6 @@
 # 02-tidy_data_tidyv.R
 #
-#  Version 0.0.6
+#  Version 0.0.7
 #
 #  Copyright 2016-2017 Nick Hepler <nick@nickhepler.com>
 #
@@ -43,19 +43,16 @@ sapply(raw, function(x) sum(is.na(x)))
 
 # Modify variables to data objects.
 raw$incident.date <- mdy(raw$incident.date)
-# raw$incident.type <- factor(raw$incident.type)
-# raw$track <- factor(raw$track)
-# raw$division <- factor(raw$division)
+raw$incident.type <- parse_factor(raw$incident.type, unique(raw$incident.type))
+raw$track <- parse_factor(raw$track, unique(raw$track))
+raw$division <- parse_factor(raw$division, unique(raw$division))
 
 #  Load data frame to dplyr.
-raw <- tbl_df(raw)
-# raw <- select(raw, -(inv.location:racing.type.description))
-# raw <- select(raw, -(weather.conditions:death.or.injury))
+raw <- select(raw, -(inv.location:racing.type.description))
+raw <- select(raw, -(weather.conditions:death.or.injury))
 
 # Review factor variables for possible issues.
-print(table(raw$incident.type,useNA="ifany"))
-print(table(raw$track,useNA="ifany"))
-print(table(raw$division,useNA="ifany"))
+sapply(raw, function(x) sum(is.na(x)))
 
 # Correct factor level issues.
 raw$track <- gsub("Saratoga Racecourse (NYRA)","Saratoga Gaming & Raceway",
@@ -65,11 +62,12 @@ raw$track <- gsub("Saratoga Racecourse (NYRA)","Saratoga Gaming & Raceway",
 # Filter data to include only equine deaths and exclude 2015. 
 raw <- arrange(raw, incident.date)
 raw <- filter(raw, incident.type=="EQUINE DEATH")
-# raw <- filter(raw, year != "2015")
+raw <- filter(raw, year != "2017")
 
 # Add count to cast into new data frames.
 raw <- mutate(raw, count = 1)
 
+# TODO(nickhepler): Loading reshape2 cause tidyr error.
 # Cast into counts by year, track
 equine.track <- dcast(raw, year+track~count, sum)
 names(equine.track) <- c("year", "track", "count")
