@@ -1,6 +1,6 @@
 #  01-import_data_tidyv.R
 #
-#  Version 0.0.7
+#  Version 0.0.8
 #
 #  Copyright 2016-2017 Nick Hepler <nick@nickhepler.com>
 #
@@ -20,8 +20,8 @@
 #  MA 02110-1301, USA.
 #
 
-# Load Project Template
-library("ProjectTemplate")
+# Load readr and Project Template
+library ("readr", "ProjectTemplate")
 
 #  Download the data to the Global Envrionment.
 raw <- read_csv("https://data.ny.gov/api/views/q6ts-kwhk/rows.csv?accessType=DOWNLOAD")
@@ -29,6 +29,12 @@ raw <- read_csv("https://data.ny.gov/api/views/q6ts-kwhk/rows.csv?accessType=DOW
 #  Create a timestamp for the download date.
 dateDownloaded <- date()
 cache('dateDownloaded')
+rm(dateDownloaded)
 
-#  Write the data to the Gloab Envrionment.
+#  Write the data to the Global Envrionment.
 write_csv(raw, "./data/equine_death_breakdown_raw.csv")
+
+# Detach packages.
+detach("package:ProjectTemplate", 
+       "package:readr",
+       unload=TRUE)
