@@ -7,6 +7,7 @@ _[Nick Hepler](http://www.albany.edu/~nh998156/), [University at Albany](http://
 This project examines summary statistics concerning *Equine Death and Breakdown* data obtained from the [New York State Gaming Commission](https://www.gaming.ny.gov/). The data contains information on every horse that has broken down, died, sustained a serious injury, or been involved in an incident at a track in New York State since 2009.
 
 The objective of the author was to utilize the `R` language and environment for statistical computing and graphics to create a reproducible research project. The project employed [Hadley Wickham](http://hadley.nz/)'s [tidyverse](http://tidyverse.org/) collection of `R` packages and principles as outlined in the [R for Data Science](http://r4ds.had.co.nz/) book. The project performs the following steps with the data:
+
 1.   Import
 1.   Tidy
 1.   Tranform
