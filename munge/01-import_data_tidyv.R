@@ -1,6 +1,6 @@
 #  01-import_data_tidyv.R
 #
-#  Version 0.0.8
+#  Version 0.0.9
 #
 #  Copyright 2016-2017 Nick Hepler <nick@nickhepler.com>
 #
@@ -20,8 +20,11 @@
 #  MA 02110-1301, USA.
 #
 
-# Load readr and Project Template
-library ("readr", "ProjectTemplate")
+# Define packages to be loaded
+pckgs <- c("readr", "ProjectTemplate")
+
+# Load packages to be loaded
+lapply(pckgs, require, character.only = TRUE)
 
 #  Download the data to the Global Envrionment.
 raw <- read_csv("https://data.ny.gov/api/views/q6ts-kwhk/rows.csv?accessType=DOWNLOAD")
@@ -34,7 +37,4 @@ rm(dateDownloaded)
 #  Write the data to the Global Envrionment.
 write_csv(raw, "./data/equine_death_breakdown_raw.csv")
 
-# Detach packages.
-detach("package:ProjectTemplate", 
-       "package:readr",
-       unload=TRUE)
+# TODO(nickhepler): Detach all packages
